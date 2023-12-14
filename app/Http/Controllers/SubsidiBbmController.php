@@ -19,12 +19,16 @@ class SubsidiBbmController extends Controller
 
     public function export()
     {
-        return Excel::download(new SubsidiBbmsExport, 'subsidiBbm.xlsx');
+        return Excel::download(new SubsidiBbmsExport, 'subsidi-bbm.xlsx');
     }
 
     public function import(Request $request)
     {
         $file = $request->file('file');
+
+        if ($file === null) {
+            return redirect()->route('dashboard');
+        }
 
         Excel::import(new SubsidiBbmsImport, $file);
 

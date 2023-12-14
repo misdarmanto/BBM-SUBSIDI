@@ -4,8 +4,9 @@ namespace App\Exports;
 
 use App\Models\SubsidiBbm;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class SubsidiBbmsExport implements FromCollection
+class SubsidiBbmsExport implements FromCollection, WithHeadings
 {
     public function collection()
     {
@@ -15,8 +16,8 @@ class SubsidiBbmsExport implements FromCollection
     public function headings(): array
     {
         return [
-            'tanggal',
-            'saldo'
+            'Tanggal',
+            'Saldo'
         ];
     }
 }

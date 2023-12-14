@@ -2,16 +2,16 @@
 @section('content')
 <div class="main">
 	<div class="main-content">
+		<div class="col-md-12">
+			<div class="panel">
+				<div class="panel-heading">
+					<h3 class="panel-title">Selamat Datang {{auth()->user()->name}}</h3>
+				</div>
+			</div>
+
+		</div>
 		<div class="container-fluid">
 
-			<!-- <div class="col-md-12">
-				<div class="panel">
-					<div class="panel-heading">
-						<h3 class="panel-title">Selamat Datang {{auth()->user()->name}}</h3>
-					</div>
-				</div>
-
-			</div> -->
 
 			<div class="container mt-5">
 				<div style="display: flex; align-items: center; margin-bottom:50px;">
